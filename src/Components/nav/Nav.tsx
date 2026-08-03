@@ -1,4 +1,3 @@
-import React from 'react'
 import styles from './Nav.module.css'
 import weatherIcon from '../../assets/weather-app.png'
 
