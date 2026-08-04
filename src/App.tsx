@@ -4,7 +4,9 @@ import { Nav } from './Components/nav/Nav'
 function App() {
   return (
     <>
-      <Nav />
+    <div className={"AppContainer"}>
+        <Nav />
+    </div>
 
     </>
   )
