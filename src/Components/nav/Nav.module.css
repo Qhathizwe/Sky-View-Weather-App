@@ -1,15 +1,16 @@
 .navContainer{
     display: flex;
-    background-color: transparent;
-    height:20%;
+    flex-direction: row;
+    background-color: color-mix(in srgb, rgb(0, 200, 250) 80%, white 50%);
+    height:15%;
     align-items: center;
-    border: 5px solid red;
+    justify-content: space-evenly;
 }
 .logo{
     text-align: center;
     display: flex;
     gap: 10px;
-    font-size: 12px; 
+    font-size: 14px; 
   
 }
 .icon{
@@ -20,10 +21,40 @@
 .logoText{
     display: flex;
     flex-direction: column;
+    /* justify-content: center; */
     flex-wrap: wrap;
+    color:white;
 }
 .slogan{
-    font-size: 12px;
-    background-color: blue;
+    font-size: 14px;
 }
+.navIcons{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+
+}
+.savedLocations{
+    width: 60px;
+    height: 60px;
+    justify-content: flex-end;
+    transition: transform 0.3s ease-in-out;
+}
+.savedLocations:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
+.settings{
+    width: 60px;
+    height: 60px;
+    transition: transform 0.3s ease-in-out;
+}
+.settings:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+
+
 

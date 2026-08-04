@@ -1,0 +1,16 @@
+.cardContainer{
+    width: 100vw;
+   
+}
+.cardContent{
+    justify-self: center;
+    width: 62%;
+    height: 280px;
+    background-color: white;
+    border-radius: 20px;
+    align-content: center;
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
