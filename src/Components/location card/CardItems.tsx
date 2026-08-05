@@ -1,7 +1,7 @@
 export interface CardItems{
+    Region: string;
     locationName: string;
+    date: string | number;
     temperature: number;
-    windSpeed: number;
     description: string;
-    humidity: number;
 }

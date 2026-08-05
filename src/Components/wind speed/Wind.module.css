@@ -1,0 +1,27 @@
+.WindContainer{
+    width: 100vw;
+}
+.windContent{
+    background-color: aliceblue;
+    width: 30%;
+    height: 170px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-self: center;
+
+}
+.WindContainer img{
+    width: 30px;
+    height: 30px;
+}
+.title, h1, p {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
+    margin: 5px;
+
+}

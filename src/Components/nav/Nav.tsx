@@ -1,7 +1,7 @@
 import styles from './Nav.module.css'
-import weatherIcon from '../../assets/nav-assets/weather-app.png'
-import savedLocations from '../../assets/nav-assets/saved.png'
-import settings from '../../assets/nav-assets/settings.png'
+import weatherIcon from '../../assets/nav and home-assets/weather-app.png'
+import savedLocations from '../../assets/nav and home-assets/saved.png'
+import settings from '../../assets/nav and home-assets/settings.png'
 
 export const Nav = () => {
   return (

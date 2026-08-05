@@ -10,11 +10,15 @@ const CardProps: React.FC<CardItems_dt> = ({ cardItems }) => {
 
     <div className={styles.cardContainer}>
       <div className={styles.cardContent}>
-        <h1>{cardItems.locationName}</h1>
-        <p>Temperature: {cardItems.temperature}°C</p>
-        <p>Wind Speed: {cardItems.windSpeed} km/h</p>
-        <p>Description: {cardItems.description}</p>
-        <p>Humidity: {cardItems.humidity}%</p>
+        <p>{cardItems.Region}</p>
+        <h3>{cardItems.locationName}</h3>
+        <p>{cardItems.date}</p>
+
+        <div className={styles.temp_descrip}>
+          <h1>{cardItems.temperature}°C</h1>
+          <p>{cardItems.description}</p>
+        </div>
+        
       </div>
     </div>
   )
