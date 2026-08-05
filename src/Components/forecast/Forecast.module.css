@@ -1,0 +1,17 @@
+.forecastContainer{
+    width: 100vw;
+    border: 5px solid red;
+}
+.forecastContent{
+    width: 62%;
+    border: 2px solid blue;
+    display: flex;
+    justify-self: center;
+    height: 100px
+}
+.h1, .h2, .h3, .h4, .h5, .h6, .h7, .h8 {
+    width: 12%;
+    align-self:center;
+    height: 50px;
+    border: 2px solid greenyellow;
+}

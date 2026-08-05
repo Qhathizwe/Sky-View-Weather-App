@@ -4,6 +4,7 @@ import Search from './Components/search/Search'
 import CardProps from './Components/location card/CardProps'
 import WindCard from './Components/wind speed/WindCard'
 import { Humidity } from './Components/humidity/Humidity'
+import Forecast from './Components/forecast/Forecast'
 
 //npm install react-router-dom
 //const router = createBrowserRouter([{}])
@@ -61,6 +62,7 @@ function App() {
         <WindCard windItems={{title:"Wind Speed", WindSpeed: "5", description: "from the S", }}/>
         <Humidity humidityItems={{title: "Humidity", humidity:"38", description: "Relative humidity"}}/>
         </div> 
+        <Forecast />
     </div>
 
     </>
