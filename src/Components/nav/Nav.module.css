@@ -1,7 +1,7 @@
 .navContainer{
     display: flex;
     flex-direction: row;
-    background-color: color-mix(in srgb, rgb(0, 200, 250) 80%, white 50%);
+
     height:15%;
     align-items: center;
     justify-content: space-evenly;
