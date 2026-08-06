@@ -23,19 +23,21 @@
     font-size: medium;
     border-radius: 25px;
     justify-content: center;
+    flex-wrap: wrap;
 }
 .myLocation{
     width: 12%;
     height: 45px;
     border-radius: 25px;
     padding: 5px 10px;
-    background-color: rgb(7, 7, 7); /* Fallback color */
+    background-color: rgb(0, 0, 0); /* Fallback color */
     background-color: rgba(0, 0, 0, 0.2);
     color:white;
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
     position: absolute;
     margin-left: 48%;
+    flex-wrap: wrap;
 }
 .myLocation:hover{
     transform: scale(1.1);
