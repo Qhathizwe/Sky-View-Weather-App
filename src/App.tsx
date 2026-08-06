@@ -1,10 +1,11 @@
 import './App.css'
-import { Nav } from './Components/nav/Nav'
-import Search from './Components/search/Search'
-import CardProps from './Components/location card/CardProps'
-import WindCard from './Components/wind speed/WindCard'
-import { Humidity } from './Components/humidity/Humidity'
-import Forecast from './Components/forecast/Forecast'
+import { Home } from './Pages/home/Home'
+import { Route, Routes } from 'react-router-dom'
+import SavedLocations from './Pages/SavedLocations'
+import SettingsPage from './Pages/SettingsPage'
+// import Not_Found from './Pages/Not_Found'
+
+
 
 //npm install react-router-dom
 //const router = createBrowserRouter([{}])
@@ -54,17 +55,12 @@ import Forecast from './Components/forecast/Forecast'
 function App() {
   return (
     <>
-    <div className={"AppContainer"}>
-        <Nav />
-        <Search />
-        <CardProps cardItems={{Region: "KwaZulu Natal, South Africa", locationName: "Pietermaritzburg", date: "Wednesday, 09:00am" , temperature: 30, description: "Sunny",}}/> 
-        <div className="wind_humidity">
-        <WindCard windItems={{title:"Wind Speed", WindSpeed: "5", description: "from the S", }}/>
-        <Humidity humidityItems={{title: "Humidity", humidity:"38", description: "Relative humidity"}}/>
-        </div> 
-        <Forecast />
-    </div>
-
+    <Routes>
+    <Route path='/' element={<Home />}/>
+    <Route path='saved-locations' element={<SavedLocations />}/>
+    <Route path='settings-page' element={<SettingsPage />} />
+    {/* <Route path='page-not-found' element={Not_Found}/> */}
+    </Routes>
     </>
   )
 }
