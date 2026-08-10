@@ -1,12 +1,14 @@
-import { NavLink } from "react-router-dom"
+
+import Back from "../Components/Back-Component/Back"
 
 const SavedLocations = () => {
 
   return (
-    
-     
-    <div>SavedLocations
-        <button><NavLink to ='/'/>BACK</button>
+
+    <div>
+      <div> <Back /></div>
+      SavedLocations
+  
     </div>
   )
 }

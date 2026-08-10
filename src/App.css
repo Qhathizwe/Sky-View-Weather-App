@@ -1,18 +1,32 @@
-/* index.css or App.css */
+/* App.css */
+
+/* Global Default Variables (Light Mode) */
 :root {
   --bg-color: #f0f4f8;
   --text-color: #1e293b;
   --card-bg: #ffffff;
 }
 
-.dark {
+/* Global Overrides (Triggered when .dark class is added to <html>) */
+:root.dark {
   --bg-color: #0f172a;
   --text-color: #f8fafc;
   --card-bg: #1e293b;
 }
 
+/* This applies the variables automatically to all pages and sub-elements */
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+/* Reusable card configuration for any component across your routes */
+.weather-card, .settings-card {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  border: 1px solid rgba(128, 128, 128, 0.2);
   transition: background-color 0.3s ease, color 0.3s ease;
 }
