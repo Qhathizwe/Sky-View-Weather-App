@@ -1,9 +1,12 @@
-.humidityContainer{
-    width: 100vw;
+/* src/Components/humidity/Humidity.module.css */
+
+.humidityContainer {
+    width: 100%; /* Adapts dynamically to parent column sizes instead of stretching 100vw */
 }
-.humidityContent{
-    background-color: rgb(248, 239, 239); 
+
+.humidityContent {
     background-color: rgba(126, 122, 122, 0.2);
+    backdrop-filter: blur(8px);
     color: #f0f8ff;
     width: 100%;
     height: 170px;
@@ -11,19 +14,43 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    justify-self: center;
+    align-items: center; /* Horizontally align text streams cleanly */
+    box-sizing: border-box;
+    padding: 16px;
+}
 
+.humidityContainer img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
 }
-.humidityContainer img{
-    width: 30px;
-    height: 30px;
-}
- .title, h1, p {
+
+.title {
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: center;
-    gap: 10px;
-    text-align: center;
-    margin: 5px;
+    gap: 8px;
+    margin: 4px 0;
+}
 
+.title p {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    opacity: 0.8;
+    margin: 0;
+}
+
+.humidityContent h1 {
+    font-size: 36px;
+    font-weight: 700;
+    margin: 8px 0;
+}
+
+.humidityContent > p {
+    font-size: 14px;
+    opacity: 0.9;
+    text-align: center;
+    margin: 0;
 }
