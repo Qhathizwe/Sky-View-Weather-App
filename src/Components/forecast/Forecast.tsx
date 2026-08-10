@@ -1,21 +1,58 @@
-// import styles from './Forecast.module.css'
+// src/Components/forecast/Forecast.tsx
+import React from 'react';
+import type { ForecastItems } from './ForecastItems';
+import styles from './Forecast.module.css';
 
- const Forecast = () => {
+type ForecastProps = {
+  forecastItems: ForecastItems;
+};
+
+const Forecast: React.FC<ForecastProps> = ({ forecastItems }) => {
   return (
-    <></>
-    // <div className={styles.forecastContainer}>
-    //     <div className={styles.forecastContent}>
-    //         <h2>Forecast</h2>
-    //             <div className={styles.h1}></div>
-    //             <div className={styles.h2}></div>
-    //             <div className={styles.h3}></div>
-    //             <div className={styles.h4}></div>
-    //             <div className={styles.h5}></div>
-    //             <div className={styles.h6}></div>
-    //             <div className={styles.h7}></div>
-    //             <div className={styles.h8}></div>
-    //     </div>
-    // </div>
-  )
-}
+    <div className={styles.forecastContainer}>
+      
+      /* --- SECTION 1: 7-DAY EXTENDED FORECAST --- */
+      <div className={styles.forecastSection}>
+        <h3 className={styles.sectionTitle}>7-Day Outlook</h3>
+        <div className={styles.scrollTrack}>
+          {forecastItems.days.map((day) => {
+            // (YYYY-MM-DD) format
+            const displayDate = new Date(day.date).toLocaleDateString(undefined, {
+              weekday: 'short',
+              month: 'short',
+              day: 'numeric',
+            });
+
+            return (
+              <div key={day.date} className={styles.forecastCard}>
+                <p className={styles.dateLabel}>{displayDate}</p>
+                <div className={styles.tempRange}>
+                  <span className={styles.highTemp}>{Math.round(day.tempMax)}°</span>
+                  <span className={styles.lowTemp}>{Math.round(day.tempMin)}°</span>
+                </div>
+                <p className={styles.condLabel}>{day.conditions}</p>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
+      /* --- SECTION 2: HOURLY FORECAST --- */
+      <div className={styles.forecastSection}>
+        <h3 className={styles.sectionTitle}>Hourly Breakdown</h3>
+        <div className={styles.scrollTrack}>
+          {forecastItems.hours.map((hour, idx) => (
+            <div key={`${hour.time}-${idx}`} className={styles.forecastCard}>
+              <p className={styles.timeLabel}>{hour.time.slice(0, 5)}</p>
+              <h2 className={styles.hourTemp}>{Math.round(hour.temp)}°C</h2>
+              <p className={styles.condLabel}>{hour.conditions}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  );
+};
+
 export default Forecast;

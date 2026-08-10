@@ -1,15 +1,26 @@
-.AppContainer{
+
+.AppContainer {
     min-height: 100vh;
     width: 100%;
     background: linear-gradient(135deg, #1fa2ff, #12d6df, #a6ffcb);
     transition: background 0.3s ease;
+    padding-bottom: 40px;
+    box-sizing: border-box;
 }
 
-.wind_humidity{
+.wind_humidity {
     display: flex;
     flex-direction: row;
     width: 62%;
+    max-width: 500px; 
     justify-self: center;
     gap: 20px;
+}
 
+
+@media (max-width: 600px) {
+    .wind_humidity {
+        flex-direction: column;
+        width: 90%;
+    }
 }
