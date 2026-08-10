@@ -1,6 +1,6 @@
 // src/Pages/home/Home.tsx
 import React, { useState } from 'react';
-import { useWeather } from '../../hooks/useWeather';
+import useFetchWeather from '../../hooks/useFetchWeather'
 
 import { Nav } from '../../Components/nav/Nav';
 import Search from '../../Components/search/Search';
@@ -20,7 +20,7 @@ export const Home: React.FC = () => {
 
   const [cityQuery, setCityQuery] = useState<string>("Pietermaritzburg");
   
-  const { data, loading, error } = useWeather(cityQuery);
+  const { data, loading, error } = useFetchWeather(cityQuery);
 
   if (loading) return <div style={{ padding: '40px', color: 'white', textAlign: 'center' }}>Synchronising weather feeds...</div>;
   if (error) return <div style={{ padding: '40px', color: 'red', textAlign: 'center' }}>{error}</div>;

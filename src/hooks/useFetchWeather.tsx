@@ -1,4 +1,4 @@
-// src/hooks/useWeather.tsx
+// src/hooks/useFetchWeather.tsx
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
@@ -15,18 +15,18 @@ export interface WeatherData {
     datetime: string;
     tempmax: number;
     tempmin: number;
-    conditions: string; 
+    conditions: string;
     hours: Array<{
       datetime: string;
       temp: number;
       windspeed: number;
       humidity: number;
-      conditions: string; 
+      conditions: string;
     }>;
   }>;
 }
 
-export function useWeather(locationQuery: string) {
+export default function useWeather(locationQuery: string) {
   const [data, setData] = useState<WeatherData | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
@@ -41,7 +41,11 @@ export function useWeather(locationQuery: string) {
         return;
       }
 
-      const url = `https://visualcrossing.com{encodeURIComponent(locationQuery)}?unitGroup=metric&key=${apiKey}&contentType=json&include=current,hours,days`;
+     
+      const baseUrl = "https://visualcrossing.com";
+      const queryParams = "?unitGroup=metric&key=" + apiKey + "&contentType=json&include=current,hours,days";
+      
+      const url = baseUrl + encodeURIComponent(locationQuery) + queryParams;
 
       try {
         setLoading(true);
