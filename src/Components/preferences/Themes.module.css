@@ -1,0 +1,17 @@
+.themeSelector{
+    display: flex;
+    gap: 20px;
+}
+.themeSelector button{
+    color: white;
+    background-color: #0dbcc5 ;
+    width: 120px;
+    height: 40px;
+    font-weight: bold;
+    border-radius: 20px;
+    transition: transform 0.3s ease-in-out   
+}
+.themeSelector button:hover{
+      cursor: pointer;
+    transform: scale(1.2);
+}
