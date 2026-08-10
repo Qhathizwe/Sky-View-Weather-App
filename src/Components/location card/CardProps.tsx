@@ -1,5 +1,7 @@
+// src/Components/location card/CardProps.tsx
+import React from 'react';
 import type { CardItems } from './CardItems';
-import styles from './CardProps.module.css'
+import styles from './CardProps.module.css';
 
 type CardItems_dt = {
     cardItems: CardItems;
@@ -7,7 +9,6 @@ type CardItems_dt = {
 
 const CardProps: React.FC<CardItems_dt> = ({ cardItems }) => {
   return (
-
     <div className={styles.cardContainer}>
       <div className={styles.cardContent}>
         <p>{cardItems.Region}</p>
@@ -18,9 +19,9 @@ const CardProps: React.FC<CardItems_dt> = ({ cardItems }) => {
           <h1>{cardItems.temperature}°C</h1>
           <p>{cardItems.description}</p>
         </div>
-        
       </div>
     </div>
-  )
-}
-export default CardProps
+  );
+};
+
+export default CardProps;

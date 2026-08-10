@@ -1,8 +1,10 @@
 .AppContainer{
-    height: 100vh;
-    width: 100vw;
+    min-height: 100vh;
+    width: 100%;
     background: linear-gradient(135deg, #1fa2ff, #12d6df, #a6ffcb);
+    transition: background 0.3s ease;
 }
+
 .wind_humidity{
     display: flex;
     flex-direction: row;

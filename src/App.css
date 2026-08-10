@@ -1,28 +1,32 @@
-/* App.css */
 
-/* Global Default Variables (Light Mode) */
 :root {
   --bg-color: #f0f4f8;
   --text-color: #1e293b;
   --card-bg: #ffffff;
+  
+  /* ☀️ Light Mode Gradient Values */
+  --gradient-start: #1fa2ff;
+  --gradient-mid: #12d6df;
+  --gradient-end: #a6ffcb;
 }
 
-/* Global Overrides (Triggered when .dark class is added to <html>) */
 :root.dark {
   --bg-color: #0f172a;
   --text-color: #f8fafc;
   --card-bg: #1e293b;
+  
+  /* 🌙 Dark Mode Gradient Values (Deep Indigo / Space Blue) */
+  --gradient-start: #0f172a;
+  --gradient-mid: #1e1b4b;
+  --gradient-end: #2e1065;
 }
 
-/* This applies the variables automatically to all pages and sub-elements */
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
   transition: background-color 0.3s ease, color 0.3s ease;
   margin: 0;
-  font-family: sans-serif;
 }
-
 /* Reusable card configuration for any component across your routes */
 .weather-card, .settings-card {
   background-color: var(--card-bg);
