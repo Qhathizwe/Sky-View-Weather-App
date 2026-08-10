@@ -2,7 +2,7 @@ import './App.css'
 import { Home } from './Pages/home/Home'
 import { Route, Routes } from 'react-router-dom'
 import SavedLocations from './Pages/SavedLocations'
-import SettingsPage from './Pages/SettingsPage'
+import SettingsPage from './Pages/Settings/SettingsPage'
 // import Not_Found from './Pages/Not_Found'
 
 
