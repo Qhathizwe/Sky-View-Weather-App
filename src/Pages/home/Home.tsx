@@ -1,4 +1,4 @@
-// src/Pages/home/Home.tsx
+
 import React, { useState } from 'react';
 import useFetchWeather from '../../hooks/useFetchWeather'
 

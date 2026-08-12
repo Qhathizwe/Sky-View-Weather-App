@@ -11,7 +11,7 @@ const Forecast: React.FC<ForecastProps> = ({ forecastItems }) => {
   return (
     <div className={styles.forecastContainer}>
       
-      /* --- SECTION 1: 7-DAY EXTENDED FORECAST --- */
+      {/* --- SECTION 1: 7-DAY EXTENDED FORECAST --- */}
       <div className={styles.forecastSection}>
         <h3 className={styles.sectionTitle}>7-Day Outlook</h3>
         <div className={styles.scrollTrack}>
@@ -37,7 +37,7 @@ const Forecast: React.FC<ForecastProps> = ({ forecastItems }) => {
         </div>
       </div>
 
-      /* --- SECTION 2: HOURLY FORECAST --- */
+      {/* --- SECTION 2: HOURLY FORECAST --- */}
       <div className={styles.forecastSection}>
         <h3 className={styles.sectionTitle}>Hourly Breakdown</h3>
         <div className={styles.scrollTrack}>

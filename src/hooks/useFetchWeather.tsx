@@ -41,12 +41,10 @@ export default function useWeather(locationQuery: string) {
         return;
       }
 
-     
-      const baseUrl = "https://visualcrossing.com";
-      const queryParams = "?unitGroup=metric&key=" + apiKey + "&contentType=json&include=current,hours,days";
-      
-      const url = baseUrl + encodeURIComponent(locationQuery) + queryParams;
+      const Location = locationQuery.trim();
+      if (!Location) return;
 
+      const url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${encodeURIComponent(Location)}?unitGroup=metric&key=${apiKey}&contentType=json&include=current,hours,days`;
       try {
         setLoading(true);
         const response = await axios.get<WeatherData>(url);
@@ -60,7 +58,7 @@ export default function useWeather(locationQuery: string) {
       }
     }
 
-    if (locationQuery) {
+    if (locationQuery && locationQuery.trim() !== '') {
       fetchWeather();
     }
   }, [locationQuery]);
