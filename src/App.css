@@ -1,13 +1,9 @@
 
 :root {
-  --bg-color: #f0f4f8;
+  --bg-color: white;
   --text-color: #1e293b;
   --card-bg: #ffffff;
   
-  /* ☀️ Light Mode Gradient Values */
-  --gradient-start: #1fa2ff;
-  --gradient-mid: #12d6df;
-  --gradient-end: #a6ffcb;
 }
 
 :root.dark {

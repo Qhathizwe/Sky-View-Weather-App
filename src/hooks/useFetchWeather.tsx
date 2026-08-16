@@ -1,4 +1,4 @@
-// src/hooks/useFetchWeather.tsx
+
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 

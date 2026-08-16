@@ -2,7 +2,7 @@
 .AppContainer {
     min-height: 100vh;
     width: 100%;
-    background: linear-gradient(135deg, #1fa2ff, #12d6df, #a6ffcb);
+    background: linear-gradient(135deg, #1fa2ff, #2e1065, #1e1b4b);
     transition: background 0.3s ease;
     padding-bottom: 40px;
     box-sizing: border-box;
@@ -16,6 +16,28 @@
     justify-self: center;
     gap: 20px;
 }
+:root {
+  --bg-color: #f0f4f8;
+  --text-color: #1e293b;
+  --card-bg: #ffffff;
+  
+  /* ☀️ Light Mode Gradient Values */
+  --gradient-start: #1fa2ff;
+  --gradient-mid: #12d6df;
+  --gradient-end: #a6ffcb;
+}
+
+:root.dark {
+  --bg-color: #0f172a;
+  --text-color: #f8fafc;
+  --card-bg: #1e293b;
+  
+  /* 🌙 Dark Mode Gradient Values (Deep Indigo / Space Blue) */
+  --gradient-start: #0f172a;
+  --gradient-mid: #1e1b4b;
+  --gradient-end: #2e1065;
+}
+
 
 
 @media (max-width: 600px) {
