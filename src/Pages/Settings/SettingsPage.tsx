@@ -4,7 +4,7 @@ import Back from '../../Components/Back-Component/Back'
 
 const SettingsPage = () => {
   return (
-    <div className={styles.SetttingsContainer}>
+    <div className={styles.SettingsContainer}>
       <Back />
       <Preferences />
     </div>

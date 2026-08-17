@@ -24,7 +24,7 @@ body {
   margin: 0;
 }
 /* Reusable card configuration for any component across your routes */
-.weather-card, .settings-card {
+ .SettingsContainer {
   background-color: var(--card-bg);
   color: var(--text-color);
   border: 1px solid rgba(128, 128, 128, 0.2);

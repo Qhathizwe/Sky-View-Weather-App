@@ -28,7 +28,7 @@
 }
 
 :root.dark {
-  --bg-color: #0f172a;
+  --bg-color:  #0f172a, #1e1b4b, #2e1065 ;
   --text-color: #f8fafc;
   --card-bg: #1e293b;
   

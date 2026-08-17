@@ -31,6 +31,14 @@ export default function useWeather(locationQuery: string) {
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
+  const [units, setUnits] = useState<string>('°C');
+
+    const toggleUnits = () => {
+    setUnits((prev) => (prev === '°C' ? '°F' : '°C'));
+  };
+
+
+
   useEffect(() => {
     async function fetchWeather() {
       const apiKey = import.meta.env.VITE_VISUAL_CROSSING_KEY;
@@ -44,7 +52,7 @@ export default function useWeather(locationQuery: string) {
       const Location = locationQuery.trim();
       if (!Location) return;
 
-      const url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${encodeURIComponent(Location)}?unitGroup=metric&key=${apiKey}&contentType=json&include=current,hours,days`;
+      const url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${encodeURIComponent(Location)}?unitGroup=${units}&key=${apiKey}&contentType=json&include=current,hours,days`;
       try {
         setLoading(true);
         const response = await axios.get<WeatherData>(url);
@@ -61,7 +69,7 @@ export default function useWeather(locationQuery: string) {
     if (locationQuery && locationQuery.trim() !== '') {
       fetchWeather();
     }
-  }, [locationQuery]);
+  }, [locationQuery, units]);
 
-  return { data, loading, error };
+  return { data, loading, error, toggleUnits };
 }

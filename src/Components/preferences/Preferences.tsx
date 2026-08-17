@@ -14,6 +14,7 @@ const Preferences = () => {
           <div className={styles.theme}>
             <Themes />
           </div>
+          <div></div>
         </div>
     </div>
   )

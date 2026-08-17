@@ -5,9 +5,10 @@ import styles from './CardProps.module.css';
 
 type CardItems_dt = {
     cardItems: CardItems;
+    units : string;
 };
 
-const CardProps: React.FC<CardItems_dt> = ({ cardItems }) => {
+const CardProps: React.FC<CardItems_dt> = ({ cardItems, units }) => {
   return (
     <div className={styles.cardContainer}>
       <div className={styles.cardContent}>
@@ -16,7 +17,7 @@ const CardProps: React.FC<CardItems_dt> = ({ cardItems }) => {
         <p>{cardItems.date}</p>
 
         <div className={styles.temp_descrip}>
-          <h1>{cardItems.temperature}°C</h1>
+          <h1>{cardItems.temperature}{units}°C</h1>
           <p>{cardItems.description}</p>
         </div>
       </div>
