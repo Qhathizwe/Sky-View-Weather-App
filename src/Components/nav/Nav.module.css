@@ -1,60 +1,96 @@
-.navContainer{
-    display: flex;
-    flex-direction: row;
-
-    height:15%;
-    align-items: center;
-    justify-content: space-evenly;
+.navContainer {
+  width: min(92%, var(--page-max-width));
+  margin: 0 auto;
+  padding: 16px var(--content-padding);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
 }
-.logo{
-    text-align: center;
-    display: flex;
-    gap: 10px;
-    font-size: 14px; 
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.icon {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));
+}
+
+.logoText {
+  display: flex;
+  flex-direction: column;
+  color: var(--text-primary);
+}
+
+.logoText h1{
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+  color: var(--text-secondary);
+  letter-spacing: -0.5px;
+}
+span{
+    color: var(--accent);
+}
+
+.slogan {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin: 0;
+  font-weight: 500;
+}
+
+.navIcons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.savedLocations,
+.settings {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  cursor: pointer;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+}
+
+.savedLocations:hover,
+.settings:hover {
+  transform: scale(1.15) rotate(-4deg);
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+}
+
+@media (max-width: 480px) {
+  .navContainer {
+    padding: 12px;
+  }
   
+  .icon {
+    width: 44px;
+    height: 44px;
+  }
+  
+  .logoText h1 {
+    font-size: 20px;
+    
+  }
+  
+  .slogan {
+    font-size: 10px;
+  }
+  
+  .savedLocations,
+  .settings {
+    width: 36px;
+    height: 36px;
+  }
 }
-.icon{
-    width: 90px;
-    height: 90px;
-    align-self: center;
-}
-.logoText{
-    display: flex;
-    flex-direction: column;
-    /* justify-content: center; */
-    flex-wrap: wrap;
-    color:white;
-}
-.slogan{
-    font-size: 14px;
-}
-.navIcons{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 20px;
-
-}
-.savedLocations{
-    width: 60px;
-    height: 60px;
-    justify-content: flex-end;
-    transition: transform 0.3s ease-in-out;
-}
-.savedLocations:hover{
-    cursor: pointer;
-    transform: scale(1.2);
-}
-.settings{
-    width: 60px;
-    height: 60px;
-    transition: transform 0.3s ease-in-out;
-}
-.settings:hover{
-    cursor: pointer;
-    transform: scale(1.2);
-}
-
-
-
-

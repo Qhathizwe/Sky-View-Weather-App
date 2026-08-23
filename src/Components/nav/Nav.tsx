@@ -22,7 +22,7 @@ const NavigateSavedLocations = () =>{
             <img src={weatherIcon} alt='icon' className={styles.icon}/> 
         </div>
         <div className={styles.logoText}>
-                <h1>Sky-View</h1>
+                <h1>Phoswa<span className={styles.Lt_secondary}>-Forecasts</span></h1>
                 <p className={styles.slogan}>Know your weather, Plan your day</p>
             </div>
         <div className={styles.navIcons}>
