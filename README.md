@@ -41,6 +41,15 @@ A beautiful, responsive weather application built with **React 19 + TypeScript +
 - **CSS Modules** — Scoped component styling
 - **localStorage** — Persistence (themes, units, saved locations, cache)
 
+
+
 ---
+
+## ⚙️ Setup & Installation
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/your-username/mi-weather-app.git
+cd mi-weather-app
 
 ## 📁 Project Structure
