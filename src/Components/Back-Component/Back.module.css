@@ -1,10 +1,28 @@
-.backContainer img{
-    width: 50px;
-    height: 50px;
-    transition: transform 0.3s ease-in-out;
-    margin: 20px 20px;
+.backContainer {
+  width: min(92%, var(--page-max-width));
+  margin: 0 auto;
+  padding: 16px var(--content-padding);
+  display: flex;
+  justify-content: flex-start;
 }
+
+.backContainer img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  cursor: pointer;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+}
+
 .backContainer img:hover {
-    cursor: pointer;
-    transform: scale(1.2);
+  transform: scale(1.15) translateX(-4px);
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+}
+
+@media (max-width: 480px) {
+  .backContainer img {
+    width: 32px;
+    height: 32px;
+  }
 }
