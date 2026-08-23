@@ -52,4 +52,78 @@ A beautiful, responsive weather application built with **React 19 + TypeScript +
 git clone https://github.com/your-username/mi-weather-app.git
 cd mi-weather-app
 
+npm install
+
+VITE_VISUAL_CROSSING_KEY=your_api_key_here
+
+npm run dev
+
+npm run build
+
+
 ## 📁 Project Structure
+mi-weather-app/
+├── public/
+│   └── favicon.png
+├── src/
+│   ├── App.tsx                    # Root component with routes
+│   ├── main.tsx                   # Entry point
+│   ├── App.css                    # Global theme variables
+│   ├── index.css                  # Base styles
+│   ├── hooks/
+│   │   └── useWeather.ts          # Weather API hook with caching
+│   ├── Components/
+│   │   ├── nav/
+│   │   │   ├── Nav.tsx            # Navigation bar
+│   │   │   ├── Nav.module.css
+│   │   │   └── Search.tsx         # Location search input
+│   │   ├── location card/
+│   │   │   ├── CardProps.tsx      # Main weather display card
+│   │   │   ├── CardProps.module.css
+│   │   │   └── CardItems.ts
+│   │   ├── wind speed/
+│   │   │   ├── WindCard.tsx
+│   │   │   └── Wind.module.css
+│   │   ├── humidity/
+│   │   │   ├── Humidity.tsx
+│   │   │   └── Humidity.module.css
+│   │   ├── forecast/
+│   │   │   ├── Forecast.tsx       # Daily & hourly forecast
+│   │   │   ├── Forecast.module.css
+│   │   │   └── ForecastItems.ts
+│   │   ├── weather-icon/
+│   │   │   ├── WeatherIcon.tsx    # Emoji weather icon mapper
+│   │   │   └── WeatherIcon.module.css
+│   │   ├── preferences/
+│   │   │   ├── Preferences.tsx
+│   │   │   ├── Preferences.module.css
+│   │   │   └── Themes.tsx         # Light/Dark theme toggle
+│   │   ├── units/
+│   │   │   ├── Units.tsx          # °C / °F toggle
+│   │   │   └── Units.module.css
+│   │   └── Back-Component/
+│   │       ├── Back.tsx
+│   │       └── Back.module.css
+│   ├── Pages/
+│   │   ├── home/
+│   │   │   ├── Home.tsx           # Main dashboard page
+│   │   │   └── Home.module.css
+│   │   ├── Settings/
+│   │   │   ├── SettingsPage.tsx
+│   │   │   └── Settings.module.css
+│   │   ├── SavedLocations.tsx     # Saved locations manager
+│   │   ├── SavedLocations.module.css
+│   │   └── Not_Found.tsx
+│   └── assets/                    # Icons & images
+├── .env                           # API key
+├── index.html
+├── package.json
+├── tsconfig.json
+├── tsconfig.app.json
+├── tsconfig.node.json
+├── vite.config.ts
+└── eslint.config.js
+
+GET https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/{location}?unitGroup={unit}&key={apiKey}&contentType=json&include=current,hours,days,alerts
+
+
