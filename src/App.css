@@ -1,32 +1,82 @@
-
 :root {
-  --bg-color: white;
-  --text-color: #1e293b;
-  --card-bg: #ffffff;
+  /* Light Mode - Soft ocean/sky blend */
+  --bg-gradient: linear-gradient(135deg, #82d1cd 0%, #9089a5 50%, #99c2d2 100%);
+  --bg-solid: #f0f4f8;
   
+  /* Glassmorphism - Light */
+  --glass-bg: rgba(255, 255, 255, 0.55);
+  --glass-border: rgba(255, 255, 255, 0.8);
+  --glass-shadow: 0 8px 32px rgba(31, 38, 135, 0.1);
+  --glass-text: #1e293b;
+  
+  /* Text */
+  --text-primary: #1e293b;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  
+  /* Accent */
+  --accent: #0dbcc5;
+  --accent-hover: #0a9aa1;
+  
+  /* Layout */
+  --page-max-width: 800px;
+  --content-padding: 20px;
+  --card-radius: 20px;
 }
 
 :root.dark {
-  --bg-color: #0f172a;
-  --text-color: #f8fafc;
-  --card-bg: #1e293b;
+  /* Dark Mode - Deep space/purple blend */
+  --bg-gradient: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+  --bg-solid: #0f172a;
   
-  /* 🌙 Dark Mode Gradient Values (Deep Indigo / Space Blue) */
-  --gradient-start: #0f172a;
-  --gradient-mid: #1e1b4b;
-  --gradient-end: #2e1065;
+  /* Glassmorphism - Dark */
+  --glass-bg: rgba(255, 255, 255, 0.06);
+  --glass-border: rgba(255, 255, 255, 0.12);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  --glass-text: #f1f5f9;
+  
+  /* Text */
+  --text-primary: #f1f5f9;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+  
+  --accent: #22d3ee;
+  --accent-hover: #06b6d4;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  min-height: 100vh;
 }
 
 body {
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  transition: background-color 0.3s ease, color 0.3s ease;
-  margin: 0;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background: var(--bg-gradient);
+  background-attachment: fixed;
+  color: var(--text-primary);
+  transition: background 0.4s ease, color 0.3s ease;
+  line-height: 1.5;
 }
-/* Reusable card configuration for any component across your routes */
- .SettingsContainer {
-  background-color: var(--card-bg);
-  color: var(--text-color);
-  border: 1px solid rgba(128, 128, 128, 0.2);
-  transition: background-color 0.3s ease, color 0.3s ease;
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(128, 128, 128, 0.3);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(128, 128, 128, 0.5);
 }
