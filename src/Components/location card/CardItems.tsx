@@ -4,4 +4,5 @@ export interface CardItems{
     date: string | number;
     temperature: number;
     description: string;
+    icon?: string;
 }
