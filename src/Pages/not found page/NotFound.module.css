@@ -1,0 +1,45 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  color: var(--text-primary);
+}
+
+.code {
+  font-size: 96px;
+  font-weight: 800;
+  margin: 0;
+  opacity: 0.8;
+  background: linear-gradient(135deg, var(--accent), var(--accent-hover));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.message {
+  font-size: 20px;
+  color: var(--text-secondary);
+}
+
+.homeBtn {
+  margin-top: 20px;
+  padding: 14px 36px;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 28px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(13, 188, 197, 0.3);
+}
+
+.homeBtn:hover {
+  transform: translateY(-2px) scale(1.05);
+  background: var(--accent-hover);
+  box-shadow: 0 8px 20px rgba(13, 188, 197, 0.4);
+}
