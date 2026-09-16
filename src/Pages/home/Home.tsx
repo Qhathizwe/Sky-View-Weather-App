@@ -31,7 +31,6 @@ export const Home: React.FC = () => {
 
   const { data, loading, error } = useWeather(cityQuery, units);
 
-  // Load saved locations from localStorage
   const getSavedLocations = (): string[] => {
     try {
       const raw = localStorage.getItem(SAVED_LOCATIONS_KEY);
@@ -62,7 +61,6 @@ export const Home: React.FC = () => {
     });
   };
 
-  // Request geolocation on mount
   useEffect(() => {
     if (!navigator.geolocation) {
       setGeoError('Geolocation is not supported by your browser');
@@ -81,7 +79,6 @@ export const Home: React.FC = () => {
     );
   }, []);
 
-  // Show weather alerts as notifications
   useEffect(() => {
     if (data?.alerts && data.alerts.length > 0) {
       const alert = data.alerts[0];
