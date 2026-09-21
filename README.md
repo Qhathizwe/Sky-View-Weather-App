@@ -1,4 +1,4 @@
-https://socialify.git.ci/Qhathizwe/Sky-View-Weather-App/image?language=1&name=1&owner=1&stargazers=1&theme=Auto
+<img src="https://socialify.git.ci/Qhathizwe/Sky-View-Weather-App/image?language=1&owner=1&name=1&stargazers=1&theme=Light" alt="Sky-View-Weather-App" width="640" height="320" />
 
 # 🌤️ Phoswa-Forecast
 
